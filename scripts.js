@@ -68,3 +68,12 @@ for (let i = 0; i < maxTasks; i++) {
     );
   }
 }
+
+// Filter out only the completed tasks for quick viewing
+let completedTasks = initialTasks.filter((task) => task.status === "done");
+
+// Display all tasks in the console
+console.log("All tasks:", initialTasks);
+
+// Display completed tasks in the console
+console.log("Completed tasks:", completedTasks);
