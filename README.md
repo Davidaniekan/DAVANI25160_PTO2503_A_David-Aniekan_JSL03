@@ -1,38 +1,106 @@
-# JSL03 Project Brief: Console-Based Task Manager
+# 📝 JSL03 Project Brief: Console-Based Task Manager
 
-## Important Prerequisite
+## 📖 Project Overview (🧩 Launch Career Kanban Board)
 
-1. Before starting this challenge, make sure you have reviewed and corrected your JSL02 project using the provided solution. Your prompts for entering task details should be fully functional and include proper validation checks to ensure accurate user input.
-2. **Check the project user stories in your student dashboard**, make sure you understand what is required for each feature.
+The **Launch Career Kanban Board** is a simple, browser-based task management tool that organizes tasks into **TODO**, **DOING**, and **DONE** columns.  
+While the HTML and CSS establish the static, responsive layout, the **JavaScript logic powers the dynamic functionality** — enabling users to create new tasks through prompts, validate inputs, assign unique IDs, and filter completed tasks.
 
-## Overview
+This project is designed as a learning exercise in **JavaScript input handling, data validation, and array manipulation**.
 
-This project involves creating a **simple task management system** where users can add **up to three new tasks** to an existing task array. Tasks are **stored as objects in an array**, each with a **unique incremental ID**. Users will enter task details via prompts, and the system will allow filtering to view only completed tasks. The project focuses on **array manipulation, user interaction via prompts and alerts, and console logging for task management**.
+---
 
-## Key Objectives
+## 🛠️ Technologies Used
 
-### Logic & User Interaction
+- **HTML5** – Semantic structure of the Kanban board.
+- **CSS3** – Responsive layout using Flexbox and media queries.
+- **JavaScript (ES6)** – Dynamic task creation, validation, and filtering logic.
+- **Google Fonts** – *Plus Jakarta Sans* for modern typography.
 
-- Store tasks as **objects inside an array** for structured data management.
-- Allow users to **add up to three new tasks** to the existing task list.
-- Ensure each new task has a **unique incremental ID** based on the last task in the array.
-- Prompt users to enter **task details (title, description, status)** and store them in an object.
-- Alert users when they reach the task limit with the message:
-  _"There are enough tasks on your board, please check them in the console."_
-  Implement a **filter function** to display only tasks with the status `"done"`.
-- Log **all tasks** in the console with a clear label for easy review.
-- Log **only completed tasks** (status: `"done"`) in the console under a "Completed Tasks" label for quick reference.
+---
 
-## Code Quality & Maintainability
+## ✨ Key Features
 
-- Use meaningful variable and function names to ensure readability and maintainability.
-- Follow consistent indentation and formatting to enhance code clarity.
-- Include comments explaining key logic and functionality to support future modifications.
+### JavaScript Functionality
+- 📋 **Initial Task Array** – Preloaded with sample tasks containing `id`, `title`, `description`, and `status`.
+- 📝 **Prompt-Driven Task Creation** – On load, users can add up to **3 new tasks** using browser `prompt()` dialogs.
+- ✅ **Status Validation** – Only accepts `"todo"`, `"doing"`, or `"done"`. Invalid entries trigger a re-prompt.
+- 🔢 **Auto-Incrementing IDs** – Each task gets a unique sequential `id` starting from 4.
+- 🔍 **Completed Task Filtering** – Generates a list of all tasks marked `done`.
+- 🖥 **Console Logging - Outputs:**
+    - All tasks(existing + newly added)
+    - Completed tasks only
 
-## Expected Outcome
+### HTML & CSS Highlights
+- **Sidebar** with board navigation.
+- **Three Columns**: TODO, DOING, DONE with color-coded indicators.
+- **Responsive Design** with mobile-friendly layout adjustments.
 
-A **structured and limited task management system** that enables users to add, review, and filter tasks efficiently while ensuring **clean, well-documented, and maintainable code.**
+---
 
-**Console Log of all and completed tasks**
+## 📂 Project Structure
+```
+📁 project-root
+│── index.html       # Static layout and structure
+│── styles.css       # Styling and responsiveness
+│── scripts.js       # JavaScript task logic
+│── assets/          # Icons, logos, and images
+```
+---
 
-![console log](./explainer-images/console%20log.png)
+## ⚙️ Setup Instructions
+1. **Download or Clone** the repository.
+2. Keep all files (`index.html`, `styles.css`, `scripts.js`, and `assets/`) in the same directory.
+3. Open `index.html` in any modern browser.
+4. Make sure pop-ups and prompts are enabled in your browser settings.
+
+---
+
+## 🚀 How It Works
+1. When the page loads:
+   - Default tasks are initialized in the `initialTasks` array.
+   - The browser will prompt you to enter details for up to **3 new tasks**.
+2. For each new task:
+   - Enter the **Title** → e.g., `Learn Node.js`
+   - Enter the **Description** → e.g., `Practice backend development`
+   - Enter the **Status** → must be one of: `todo`, `doing`, or `done`
+     - If invalid, you’ll be asked again until correct.
+3. After the final task:
+   - An alert will notify you that you’ve reached the task entry limit.
+   - All tasks and completed tasks are logged to the console.
+
+---
+
+## ▶️ Example Console Output
+```javascript
+All tasks: [
+  { id: 1, title: "Launch Epic Career", description: "Create a killer Resume", status: "todo" },
+  { id: 2, title: "Master JavaScript", description: "Get comfortable with the fundamentals", status: "doing" },
+  { id: 3, title: "Contribute to Open Source Projects", description: "Gain practical experience and collaborate with others in the software development community", status: "done" },
+  { id: 4, title: "Learn Node.js", description: "Practice backend development", status: "todo" }
+]
+
+Completed tasks: [
+  { id: 3, title: "Contribute to Open Source Projects", description: "Gain practical experience and collaborate with others in the software development community", status: "done" }
+]
+```
+---
+
+## 🔄 Interaction Flow
+
+1. **User Input** via `prompt()` dialogs.
+
+2. **Validation** ensures only correct statuses are accepted.
+
+3. **Storage** in `initialTasks` array.
+
+4. **Filtering** creates `completedTasks` list.
+
+5. **Output** displayed in browser console.
+
+---
+
+## 👤 Author
+
+**David Aniekan**  
+Frontend learner & builder.
+[GitHub](https://github.com/Davidaniekan) | [LinkedIn](https://linkedin.com/in/david-aniekan)
