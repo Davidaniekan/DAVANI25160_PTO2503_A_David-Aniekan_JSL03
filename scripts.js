@@ -20,3 +20,9 @@ let initialTasks = [
     status: "done",
   },
 ];
+
+// Maximum number of new tasks a user can add in this run
+let maxTasks = 3;
+
+// Next available ID for new tasks (incremented after each addition)
+let nextId = 4;
